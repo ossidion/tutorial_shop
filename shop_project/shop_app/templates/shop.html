@@ -13,13 +13,13 @@
     <body>
         <div class="container">
             <div class="row">
-                {% if products %}
-                    {% for product in products %}
+                {% if items %}
+                    {% for item in items %}
                     <div class="col-md-4">
                         <div class="item">
-                            <img src="{% static 'images/' %}{{ product.image_source }}" alt="{{ product.title }}">
-                            <div class="item-title">{{ product.title }}</div>
-                            <div class="item-price">{{ product.price }} </div>
+                            <img src="{{ item.image_source }}" alt="{{ item.title }}">
+                            <div class="item-title">{{ item.title }}</div>
+                            <div class="item-price">{{ item.price }} </div>
                             <button type="button" class="btn btn-primary mt-3">Select</button>
                         </div>
                     </div>
